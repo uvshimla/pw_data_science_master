@@ -1,0 +1,43 @@
+1.  Python programming language was developed by Guido van Rossum in the late 1980s and early 1990s.
+2.  Python supports multiple programming paradigms, including procedural, object-oriented, functional, and aspect-oriented programming.
+3.  Yes.
+4.  .py.
+5.  Interpreted.
+6.  a. Functions: blocks of code that perform a specific task and can be called multiple times in the program.
+
+    b. Classes: blocks of code that define objects and their behavior, including attributes and methods.
+
+    c. If-Else statements: blocks of code that execute certain statements based on a boolean expression.
+
+7.  #.
+8.  python -V.
+9.  n Python, anonymous functions can be created at runtime using the lambda constructor. A lambda function is a small, anonymous function without a name. The syntax of a lambda function is as follows:
+    lambda arguments: expression
+10. Pip Installs Packages.
+11. a.  int(): converts a string or a float to an integer.
+    b.  abs(): returns the absolute value of a number.
+    c. max(): returns the largest item in an iterable or the largest of two or more arguments.
+12. There is no strict limit to the length of an identifier (variable name, function name, etc.) in Python. However, it is recommended to keep them short and descriptive, and the maximum length is determined by the underlying operating system and file system.
+    In practice, most operating systems have a limit of 255 characters for file names, which would also be the limit for identifier names in Python. However, it is best to keep them much shorter to improve code readability and maintainability.
+13. a. Easy to learn and use: Python has a simple and intuitive syntax, making it easy to learn and use, especially for beginners.
+    b. Plenty of libraries and modules: Python has a large number of libraries and modules available, including popular scientific computing libraries like NumPy and Pandas, as well as machine learning libraries like TensorFlow and PyTorch.
+    c. Dynamic and high-level: Python is a high-level, dynamically typed language, which means you don't need to declare data types and can write code faster.
+
+14. In Python, memory management is handled by the Python memory manager, which is part of the Python interpreter. The memory manager is responsible for allocating and deallocating memory for Python objects and data structures. When a Python object is created, the memory manager allocates memory for it and keeps track of the object's reference count. When the reference count of an object drops to zero, the memory manager deallocates the memory occupied by the object.
+    Python uses a garbage collector to automatically collect and deallocate objects that are no longer referenced in the program. The garbage collector tracks the reference count of objects and periodically frees memory occupied by objects that are no longer referenced.
+    In addition to the built-in memory management features of the Python memory manager, Python also provides several tools and techniques to help programmers manage memory effectively, including reference counting, weak references, and explicit memory management with the ctypes module.
+15. a.  Download the Python installation package from the official Python website.
+    b.  Run the installation package by double-clicking on the downloaded file.
+    c.  Follow the on-screen instructions to complete the installation process.
+    d.  Once the installation is complete, you can verify the installation by opening the Command Prompt and running the following command: python --version
+    To set a Python environment variable in Windows, you can follow these steps:
+
+    a.  Open the Start menu and search for "Environment Variables".
+    b.  Click on "Edit the system environment variables".
+    c.  In the System Properties window, click on the "Environment Variables" button.
+    d.  In the Environment Variables window, scroll down to the "System Variables" section and find the "Path" variable.
+    e.  Click on the "Edit" button and then click on the "New" button.
+    f.  Enter the path to your Python installation, for example, C:\Python37\.
+    g.  Click on "OK" to close all windows.
+    h.  After setting the environment variable, you should be able to run Python from the Command Prompt by typing python.
+16. Yes, indentation is required in Python. Indentation is used to define blocks of code and is an important part of the syntax in Python. In Python, whitespace (indentation) at the beginning of a line is used to determine the grouping of statements.
