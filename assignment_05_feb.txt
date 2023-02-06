@@ -1,0 +1,78 @@
+Q1. Explain Class and Object with respect to Object-Oriented Programming. Give a suitable example.
+Ans. 
+    Class: In object-oriented programming, a class is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods). A class defines a type of object, but is separate from any specific instance of that object.
+    Object: An object is an instance of a class. It's a run-time entity that has a state and behavior. An object has member variables, which hold its state, and member functions, which define its behavior.
+    class Dog:
+        def __init__(self, name, breed):
+            self.name = name
+            self.breed = breed
+        
+        def bark(self):
+            print("Woof!")
+
+    dog = Dog("Fido", "Labrador")
+    print(dog.name) # Output: Fido
+    dog.bark() # Output: Woof!
+Q2. Name the four pillars of OOPs.
+Ans. The four pillars of object-oriented programming (OOP) in Python are:
+
+    1. Abstraction: It refers to hiding the implementation details from the user and only showing the necessary information.
+
+    2. Encapsulation: It refers to wrapping the data and functions that operate on the data within a single unit or object.
+
+    3. Inheritance: It refers to creating a new class by inheriting properties and behaviors from an existing class.
+
+    4. Polymorphism: It refers to the ability of objects of different classes to respond to the same method call in a way that is specific to their class. This is achieved through method overloading and method overriding.
+Q3. Explain why the __init__() function is used. Give a suitable example.
+Ans. The __init__ method is a special method in Python classes that is run as soon as an object of a class is instantiated. It's often referred to as the constructor of the class.
+    The __init__ method is used to initialize the state of an object when it is created. It allows you to set the initial values of the object's attributes and perform any other setup that is necessary before the object is used.
+    class Dog:
+        def __init__(self, name, breed):
+            self.name = name
+            self.breed = breed
+            
+        def bark(self):
+            print("Woof!")
+
+    dog = Dog("Fido", "Labrador")
+    print(dog.name) # Output: Fido
+    print(dog.breed) # Output: Labrador
+Q4. Why self is used in OOPs?
+Ans. In Python, self is a reference to the current instance of a class. It's used to access the attributes and methods of the class within the class definition.
+    When you call a method on an object, the object is automatically passed as the first argument to the method. This argument is traditionally called self, but it can be named anything. By using self, you can access the attributes and methods of the object from within the class definition.
+Q5. What is inheritance? Give an example for each type of inheritance.
+Ans. Inheritance is a mechanism in object-oriented programming that allows you to create a new class by inheriting properties and behaviors from an existing class. The new class is called the derived class or subclass, and the existing class is called the base class or superclass.
+    There are several types of inheritance in Python:
+    1.  Single inheritance: In single inheritance, a derived class inherits from a single base class. The derived class adds new properties and behavior while reusing the properties and behavior of the base class.
+    class Animal:
+        def __init__(self, name):
+            self.name = name
+            
+        def make_sound(self):
+            pass
+
+    class Dog(Animal):
+        def make_sound(self):
+            print("Woof!")
+
+    dog = Dog("Fido")
+    dog.make_sound() # Output: Woof!
+    2.  Multiple inheritance: In multiple inheritance, a derived class inherits from multiple base classes. This allows the derived class to reuse properties and behavior from multiple base classes.
+    class RunningAnimal:
+        def run(self):
+            print("Running!")
+
+    class SwimmingAnimal:
+        def swim(self):
+            print("Swimming!")
+
+    class Duck(RunningAnimal, SwimmingAnimal):
+        def quack(self):
+            print("Quack!")
+
+    duck = Duck()
+    duck.run() # Output: Running!
+    duck.swim() # Output: Swimming!
+    duck.quack() # Output: Quack!
+
+

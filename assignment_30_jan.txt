@@ -1,3 +1,50 @@
+1. 
+    percentage = float(input("Enter percentage: "))
+
+    if percentage > 90:
+        print("A grade")
+    elif percentage > 80 and percentage <= 90:
+        print("B grade")
+    elif percentage >= 60 and percentage <= 80:
+        print("C grade")
+    else:
+        print("D grade")
+2. 
+    cost_price = float(input("Enter the cost price of the bike: "))
+
+    if cost_price > 100000:
+        tax = cost_price * 0.15
+        print("Road tax to be paid:", tax)
+    elif cost_price > 50000 and cost_price <= 100000:
+        tax = cost_price * 0.10
+        print("Road tax to be paid:", tax)
+    else:
+        tax = cost_price * 0.05
+        print("Road tax to be paid:", tax)
+3. 
+    city = input("Enter city: ")
+
+    if city == "Delhi":
+        print("Monument: Red Fort")
+    elif city == "Agra":
+        print("Monument: Taj Mahal")
+    elif city == "Jaipur":
+        print("Monument: Jal Mahal")
+    else:
+        print("Monument information not available for the entered city.")
+
+4. 
+    num = int(input("Enter a number: "))
+    counter = 0
+
+    while num > 10:
+        num = num / 3
+        counter += 1
+
+    print("The number can be divided by 3", counter, "times.")
+
+
+
 5.  A while loop in Python is used when you want to repeatedly execute a block of code as long as a certain condition is met. It allows you to execute a block of code repeatedly until a specific condition is met.
     Example : Printing numbers from 1 to 20
 
