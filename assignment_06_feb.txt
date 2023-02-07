@@ -1,0 +1,57 @@
+Q1. Create a function which will take a list as an argument and return the product of all the numbers
+after creating a flat list.
+Use the below-given list as an argument for your function.
+list1 = [1,2,3,4, [44,55,66, True], False, (34,56,78,89,34), {1,2,3,3,2,1}, {1:34, "key2": [55, 67, 78, 89], 4: (45,
+22, 61, 34)}, [56, 'data science'], 'Machine Learning']
+Note: you must extract numeric keys and values of the dictionary also.
+Ans. 
+    def product_of_all_numbers(lst):
+        result = 1
+        flat_list = []
+        def flatten(l):
+            for el in l:
+                if isinstance(el, int) or isinstance(el, float):
+                    flat_list.append(el)
+                elif isinstance(el, (list, tuple, set)):
+                    flatten(el)
+                elif isinstance(el, dict):
+                    for key, value in el.items():
+                        if isinstance(key, (int, float)):
+                            flat_list.append(key)
+                        if isinstance(value, (int, float)):
+                            flat_list.append(value)
+                        if isinstance(value, (list, tuple, set)):
+                            flatten(value)
+        flatten(lst)
+        for num in flat_list:
+            result *= num
+        return result
+
+    list1 = [1,2,3,4, [44,55,66, True], False, (34,56,78,89,34), {1,2,3,3,2,1}, {1:34, "key2": [55, 67, 78, 89], 4: (45, 22, 61, 34)}, [56, 'data science'], 'Machine Learning']
+    print(product_of_all_numbers(list1))
+    Q2. Write a python program for encrypting a message sent to you by your friend. The logic of encryption
+    should be such that, for a the output should be z. For b, the output should be y. For c, the output should
+    be x respectively. Also, the whitespace should be replaced with a dollar sign. Keep the punctuation
+    marks unchanged.
+    Input Sentence: I want to become a Data Scientist.
+    Encrypt the above input sentence using the program you just created.
+    Note: Convert the given input sentence into lowercase before encrypting. The final output should be
+    lowercase.
+    Ans. 
+    def encrypt_message(message):
+        alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        encrypted_message = ''
+        for char in message.lower():
+            if char == ' ':
+                encrypted_message += '$'
+            elif char in alphabet:
+                encrypted_message += alphabet[25 - alphabet.index(char)]
+            else:
+                encrypted_message += char
+        return encrypted_message
+
+    message = "I want to become a Data Scientist."
+    print(encrypt_message(message))
+
+
+
