@@ -1,0 +1,56 @@
+Q1. The function used to open a file in Python is the open() function. The different modes of opening a file in Python are:
+
+Ans. 
+    1. 'r' (read mode): This mode is used to read the contents of an existing file. The file must exist, otherwise an error is raised.
+    2. 'w' (write mode): This mode is used to write to a file. If the file exists, its contents are truncated. If the file does not exist, it is created.
+    3. 'a' (append mode): This mode is used to append data to an existing file. If the file does not exist, it is created.
+    4. 'x' (exclusive creation mode): This mode is used to create a new file. If the file already exists, an error is raised.
+    5. 'b' (binary mode): This mode is used to read or write binary data. It can be combined with the above modes by appending it to the mode string, e.g. 'wb' for binary write mode.
+
+Q2. Why close() function is used? Why is it important to close a file?
+Ans. The close() function is used to close an open file. It is important to close a file because it frees up the resources that were being used by the file, such as memory. Closing a file also ensures that any changes made to the file are saved.
+
+Q3. Write a python program to create a text file. Write 'I want to become a Data Scientist' in that file. Then close the file. Open this file and read the content of the file.
+Ans.
+    file = open("myfile.txt", "w")
+    file.write("I want to become a Data Scientist")
+    file.close()
+    file = open("newfile.txt", "r")
+    content = file.read()
+    print(content)
+    file.close()
+
+Q4. Explain the following with python code: read(), readline() and readlines).
+Ans. 
+    file = open("newfile.txt", "r")
+
+    content = file.read()
+
+    print(content)
+
+    file.close()
+
+
+Q5. Explain why with statement is used with open). What is the advantage of using with statement and open () together?
+Ans. 
+    file = open("newfile.txt", "r")
+
+    line = file.readline()
+
+    print(line)
+    file.close()
+
+Q6. Explain the write() and writelines) functions. Give a suitable example.
+Ans. a. The write() function is used to write data to a file. It takes a string as an argument and writes it to the file. If the file does not exist, it is created. If the file exists, the existing contents are truncated.
+    file = open("myfile.txt", "w")
+
+    file.write("I want to become a Data Scientist\n")
+    file.write("Data Science is a fascinating field\n")
+
+    file.close()
+    b. The writelines() function is used to write a list of strings to a file. Each string in the list is written as a separate line in the file.
+    lines = ["I want to become a Data Scientist\n", "Data Science is a fascinating field\n"]
+    file = open("myfile.txt", "w")
+    file.writelines(lines)
+    file.close()
+

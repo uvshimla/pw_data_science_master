@@ -1,0 +1,76 @@
+Q1. What is an Exception in python? Write the difference between Exceptions and Syntax errors.
+
+A1. An exception in python is an error that occurs during the execution of a program. It is an event that disrupts the normal flow of a program and requires special handling. The handling of exceptions allows a program to continue running despite the occurrence of an error.
+
+A difference between exceptions and syntax errors is that syntax errors are errors in the syntax of the program and are detected before the program is executed. Exceptions, on the other hand, occur during the execution of the program and can be handled.
+Q2. What happens when an exception is not handled? Explain with an example.
+A2. When an exception is not handled, the program stops execution and terminates abruptly with an error message. This is also known as an unhandled exception. For example, if you try to divide a number by zero in a python program, a ZeroDivisionError will be raised and if it is not handled, the program will stop execution.
+Q3. Which Python statements are used to catch and handle exceptions? Explain with an example.
+A3. The try and except statements in Python are used to catch and handle exceptions. The try block contains the code that may raise an exception, and the except block contains the code that will handle the exception if it occurs. For example:
+
+python
+Copy code
+try:
+   result = 10 / 0
+except ZeroDivisionError:
+   print("Division by zero is not allowed.")
+Q4. Explain with an example:
+    a. try and else
+    b. finally
+    c. raise
+A4. a. The try and else statement in Python is used to handle exceptions. The else block is executed when no exceptions are raised in the try block. The else block should follow the try block and is executed only when the try block is successful. For example:
+
+    try:
+        result = 10 / 5
+    except ZeroDivisionError:
+        print("Division by zero is not allowed.")
+    else:
+        print("The result is:", result)
+
+    b. The finally statement in Python is used to ensure that a block of code is executed regardless of whether an exception is raised or not. The finally block should follow the try block and is executed after the try block and the except block (if any) are executed. For example:
+    try:
+        result = 10 / 0
+    except ZeroDivisionError:
+        print("Division by zero is not allowed.")
+    finally:
+        print("The 'finally' block is executed.")
+
+    c. The raise statement in Python is used to raise an exception. You can raise an exception by using the raise statement and specifying the exception to be raised. For example:
+    def divide_by_zero(number):
+        if number == 0:
+        raise ValueError("The number cannot be zero.")
+    else:
+      return 10 / number
+
+    try:
+        result = divide_by_zero(0)
+    except ValueError as e:
+        print(e)
+
+Q5. What are Custom Exceptions in python? Why do we need Custom Exceptions? Explain with an example.
+Ans. Custom exceptions in Python are user-defined exceptions that can be raised and caught just like the built-in exceptions in Python. Custom exceptions are useful when you want to add a specific type of error handling for your application. You can create a custom exception by defining a class that inherits from the base exception class in Python (Exception).
+For example, let's say you want to raise an exception when a user enters an invalid age. You can create a custom exception class as follows:
+
+    class InvalidAgeException(Exception):
+        pass
+    age = int(input("Enter your age: "))
+    if age <= 0:
+        raise InvalidAgeException("Age must be
+Q6. Create a custom exception class. Use this class to handle an exception.
+Solve this python assignment
+Ans. 
+    class InvalidAgeException(Exception):
+        pass
+
+    def input_age():
+        age = int(input("Enter your age: "))
+        if age <= 0:
+            raise InvalidAgeException("Age must be a positive number.")
+        return age
+
+    try:
+        user_age = input_age()
+    except InvalidAgeException as e:
+        print(e)
+    else:
+        print("Your age is:", user_age)
